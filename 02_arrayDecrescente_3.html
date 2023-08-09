@@ -4,11 +4,29 @@
     //Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
 
     //ENTRADA
-
+    let num = Number(prompt("Informe um número:"));
+    let num2 = Number(prompt("Informe um outro número:"));
+    let num3 = Number(prompt("Informe um terceiro número:"));
+    let arrayVazio = []
 
     //PROCESSAMENTO
-
+    if(num < num2 && num2 < num3){
+        arrayVazio = [num3, num2, num];
+    }
+    else if(num2 < num && num < num3){
+        arrayVazio = [num3, num, num2];
+    }
+    else if(num3 < num && num < num2){
+        arrayVazio = [num2, num, num3];
+    }
+    else if(num2 < num3 && num3 < num){
+        arrayVazio = [num, num3, num2];
+    }
+    else if(num3 < num2 && num2 < num){
+        arrayVazio = [num, num2, num3];
+    }
 
     //SAÍDA
+    alert(arrayVazio)
 
 </script>
