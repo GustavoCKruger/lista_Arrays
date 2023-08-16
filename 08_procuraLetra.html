@@ -10,9 +10,9 @@
     const letra = prompt("Informe uma letra que deseja encontrar na palavra que você adicionou recentemente:").trim().toUpperCase();
 
     //PROCESSAMENTO
-    if(letra in palavra){
-        let posição = palavra.indexOf(letra);
-        alert(`A letra ${letra} existe na palavra ${palavra} na posição ${posição}.`);
+    const posicao = palavra.indexOf(letra);
+    if(posicao >= 0){
+        alert(`A letra ${letra} existe na palavra ${palavra} na posição ${posicao}.`);
     }
     else{
         alert(`A letra ${letra} não existe na palavra ${palavra}`)
